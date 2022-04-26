@@ -23,7 +23,7 @@ int combination(int n, int r)
 	return factorial(n) / (factorial(n - r) * factorial(r));
 }
 
-void main()
+void hw81()
 {
 	int n = get_integer();
 	int r = get_integer();
