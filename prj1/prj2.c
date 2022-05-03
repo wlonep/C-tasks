@@ -7,13 +7,13 @@ int s2 = 0;
 int s3 = 0;
 int s4 = 0;
 
-int print_seats_prj2()
+int print_seats()
 {
 	printf("0 1 2 3 4\n----------\n%d %d %d %d %d\n\n", s0, s1, s2, s3, s4);
 	return 1;
 }
 
-int reserve_prj2(int seat) 
+int reserve(int seat) 
 {
 	switch (seat) {
 	case 0:
@@ -57,7 +57,7 @@ int reserve_prj2(int seat)
 	}
 }
 
-int cancel_prj2(int seat)
+int cancel(int seat)
 {
 	switch (seat) {
 	case 0:
@@ -106,50 +106,50 @@ int prj2(void)
 	int select, s, result;
 
 	do {
-		printf("1: ÁÂ¼® È®ÀÎÇÏ±â\n2: ¿¹¾àÇÏ±â\n3: ¿¹¾à Ãë¼ÒÇÏ±â\n4: Á¾·áÇÏ±â\n");
-		printf("¸Ş´º¸¦ ¼±ÅÃÇÏ¼¼¿ä: ");
+		printf("1: ì¢Œì„ í™•ì¸í•˜ê¸°\n2: ì˜ˆì•½í•˜ê¸°\n3: ì˜ˆì•½ ì·¨ì†Œí•˜ê¸°\n4: ì¢…ë£Œí•˜ê¸°\n");
+		printf("ë©”ë‰´ë¥¼ ì„ íƒí•˜ì„¸ìš”: ");
 		scanf("%d", &select);
 
-		printf("\n¼±ÅÃµÈ ¸Ş´º: ");
+		printf("\nì„ íƒëœ ë©”ë‰´: ");
 
 		switch (select) {
 		case 1:
-			printf("ÁÂ¼® È®ÀÎÇÏ±â\n\n");
+			printf("ì¢Œì„ í™•ì¸í•˜ê¸°\n\n");
 			print_seats();
 			break;
 
 		case 2:
-			printf("¿¹¾àÇÏ±â\n\n");
-			printf("¿¹¾àÇÒ ÁÂ¼®À» ÀÔ·ÂÇØ ÁÖ¼¼¿ä: ");
+			printf("ì˜ˆì•½í•˜ê¸°\n\n");
+			printf("ì˜ˆì•½í•  ì¢Œì„ì„ ì…ë ¥í•´ ì£¼ì„¸ìš”: ");
 			scanf("%d", &s);
 
 			if (reserve(s) == 1) {
-				printf("¿¹¾àÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.\n\n");
+				printf("ì˜ˆì•½ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.\n\n");
 				print_seats();
 			}
-			else printf("¿¹¾à¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.\n\n");
+			else printf("ì˜ˆì•½ì— ì‹¤íŒ¨í•˜ì˜€ìŠµë‹ˆë‹¤.\n\n");
 			break;
 
 		case 3:
-			printf("¿¹¾à Ãë¼ÒÇÏ±â\n\n");
-			printf("¿¹¾àÀ» Ãë¼ÒÇÒ ÁÂ¼®À» ÀÔ·ÂÇØ ÁÖ¼¼¿ä: ");
+			printf("ì˜ˆì•½ ì·¨ì†Œí•˜ê¸°\n\n");
+			printf("ì˜ˆì•½ì„ ì·¨ì†Œí•  ì¢Œì„ì„ ì…ë ¥í•´ ì£¼ì„¸ìš”: ");
 			scanf("%d", &s);
 
 			if (cancel(s) == 1) {
-				printf("¿¹¾à Ãë¼Ò°¡ ¿Ï·áµÇ¾ú½À´Ï´Ù.\n\n");
+				printf("ì˜ˆì•½ ì·¨ì†Œê°€ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.\n\n");
 				print_seats();
 			}
-			else printf("¿¹¾à Ãë¼Ò¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.\n\n");
+			else printf("ì˜ˆì•½ ì·¨ì†Œì— ì‹¤íŒ¨í•˜ì˜€ìŠµë‹ˆë‹¤.\n\n");
 			break;
 
 		case 4:
 			break;
 
 		default:
-			printf("X\n¿Ã¹Ù¸£Áö ¾ÊÀº ¹øÈ£ÀÔ´Ï´Ù.\n\n");
+			printf("X\nì˜¬ë°”ë¥´ì§€ ì•Šì€ ë²ˆí˜¸ì…ë‹ˆë‹¤.\n\n");
 		}
 
 	} while (select != 4);
-	printf("Á¾·áÇÏ±â\n\nÀÌ¿ëÇØ ÁÖ¼Å¼­ °¨»çÇÕ´Ï´Ù.");
+	printf("ì¢…ë£Œí•˜ê¸°\n\nì´ìš©í•´ ì£¼ì…”ì„œ ê°ì‚¬í•©ë‹ˆë‹¤.");
 	return 0;
 }
