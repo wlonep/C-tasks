@@ -1,7 +1,7 @@
 #include <stdio.h>
 #pragma warning(disable:26451)
 
-int main(void)
+int hw111(void)
 {
 	int i, j;
 	int* pi = &i, * pj = &j;
