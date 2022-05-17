@@ -7,7 +7,7 @@ struct point {
 	int y;
 };
 
-int main(void)
+int hw131(void)
 {
 	struct point p1, p2;
 	printf("왼쪽 하단의 좌표를 입력하세요: ");
