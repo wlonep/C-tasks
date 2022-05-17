@@ -1,3 +1,5 @@
+// 23, 32번 줄 if문 오류 및 row, col 바꿔서 넣음. 정상작동하지 않는 코드임.
+
 #include <stdio.h>
 #pragma warning(disable:6031)
 #pragma warning(disable:6385)
